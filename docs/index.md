@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
+## AWS Cloudwatch Metrics
 
-You can use the [editor on GitHub](https://github.com/sanchitdilipjain/aws-cloudwatch-metrics2/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+**Introduction**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Metrics are information around the performance of the systems. 
 
-### Markdown
+- Out of the box a few AWS services offer metrics at no cost for resources such as Ec2, EBS, and RDS. We can also switch to detailed monitoring for a couple of resources such as Ec2 to fetch more details around the performances, and the best thing is we can publish our own application metrics. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Amazon CloudWatch ingests all the metrics in the AWS account (both AWS resource metrics and application metrics) for searching, graphing, and alarms.
 
-```markdown
-Syntax highlighted code block
+- Metric data is kept for 15 months, allowing us to view both up-to-the-minute data and historical data.
 
-# Header 1
-## Header 2
-### Header 3
+- In this tutorial we will explore around 
+  -  Viewing Cloudwatch metrics
+  -  Applying Math expression 
+  -  Understanding Metrics Explorer
 
-- Bulleted
-- List
+- Step 1: Viewing Cloudwatch metrics
 
-1. Numbered
-2. List
+   1. Traverse to the <a href="https://console.aws.amazon.com/pinpoint/">CloudWatch</a> select Metrics
 
-**Bold** and _Italic_ and `Code` text
+      <img src="images/image1.png" class="inline"/> 
+      
+      <img src="images/image2.png" class="inline"/> 
+           
+   2. Select ECS/ContainerInsights namespace, it contains all the metrics captured by CloudWatch Container Insights from the ECS clusters that have Container Insights enabled.
+     
+      <img src="images/image3.png" class="inline"/> 
+     
+   3. Select the ClusterName, ServiceName, if there are multiple ECS cluster in the account, then we will see all the cluster names listed there
+     
+      <img src="images/image4.png" class="inline"/> 
+   
+   4. Select the checkbox next to a metric to add it to the graph
+     
+      <img src="images/image5.png" class="inline"/> 
+   
+   5. Select on the Graphed metrics tab, we can change the metric statistic by selecting on the statistic type as shown below
+     
+      <img src="images/image6.png" class="inline"/> 
+   
+   6. Container Insights captures metrics at 5 minute interval by default. In order to see granular data graphed, change the Period to 1 Minute
+   
+      <img src="images/image7.png" class="inline"/> 
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- Step 2: Applying Math expression 
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sanchitdilipjain/aws-cloudwatch-metrics2/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Step 3: Understanding Metrics Explorer
