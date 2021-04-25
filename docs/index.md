@@ -16,7 +16,7 @@
   
   -  Applying Math expression 
   
-  -  Understanding Metrics Explorer
+  -  Publish custom metrics
 
 - Step 1: Viewing Cloudwatch metrics
 
@@ -83,4 +83,4 @@
 
     **Note**: There are multiple expressions available to operate on Metric data, to view all expressions click on Math expression and check out the various functions available
       
-- Step 3: Understanding Metrics Explorer
+- Step 3: Publish custom metrics
