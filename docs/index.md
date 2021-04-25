@@ -11,13 +11,16 @@
 - Metric data is kept for 15 months, allowing us to view both up-to-the-minute data and historical data.
 
 - In this tutorial we will explore around 
+  
   -  Viewing Cloudwatch metrics
+  
   -  Applying Math expression 
+  
   -  Understanding Metrics Explorer
 
 - Step 1: Viewing Cloudwatch metrics
 
-   1. Traverse to the <a href="https://console.aws.amazon.com/pinpoint/">CloudWatch</a> select Metrics
+   1. Traverse to the <a href="https://console.aws.amazon.com/cloudwatch/">CloudWatch</a> select Metrics
 
       <img src="images/image1.png" class="inline"/> 
       
