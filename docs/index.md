@@ -49,6 +49,38 @@
 
 - Step 2: Applying Math expression 
 
+    - Metric math allow us to query multiple CloudWatch metrics and leverage math expressions to create new time series based on these metrics. 
+    
+    - We can also present the resulting time series on the CloudWatch console and embed them to the dashboards
+    
+      1. Traverse to the <a href="https://console.aws.amazon.com/cloudwatch/">CloudWatch</a> select Metrics
 
+        <img src="images/image1.png" class="inline"/> 
 
+        <img src="images/image2.png" class="inline"/> 
+           
+      2. Select ECS/ContainerInsights namespace, it contains all the metrics captured by CloudWatch Container Insights from the ECS clusters that have Container Insights enabled.
+     
+        <img src="images/image3.png" class="inline"/> 
+     
+      3. Select the ClusterName, ServiceName, if there are multiple ECS cluster in the account, then we will see all the cluster names listed there
+     
+        <img src="images/image4.png" class="inline"/> 
+      
+      4. Select all the checkbox next to a metric to add it to the graph
+     
+        <img src="images/image8.png" class="inline"/> 
+      
+      5. Select on the Graphed metrics tab
+     
+        <img src="images/image9.png" class="inline"/> 
+      
+      6. Select math expression, then All functions, followed by SUM.
+      
+        <img src="images/image10.png" class="inline"/> 
+
+        <img src="images/image11.png" class="inline"/> 
+
+    **Note**: There are multiple expressions available to operate on Metric data, to view all expressions click on Math expression and check out the various functions available
+      
 - Step 3: Understanding Metrics Explorer
