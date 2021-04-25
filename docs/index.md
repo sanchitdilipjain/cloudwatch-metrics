@@ -84,3 +84,31 @@
     **Note**: There are multiple expressions available to operate on Metric data, to view all expressions click on Math expression and check out the various functions available
       
 - Step 3: Publish custom metrics
+    
+  - We can embed own custom metrics in a multiple different ways
+
+      - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">AWS CLI</a>
+
+      - <a href="https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/put-metric-data.html">put-metric-data API call</a>
+
+      - <a href="https://observability.workshop.aws/en/emf.html">Embedded Metric Format</a>
+   
+  - In this example we will uses the AWS CLI to embed a metric called throttlecount under the dimension ServerName,ServerType to the observability namespace
+
+       1. Run the below command in the on CloudShell or on your own terminal
+
+              aws cloudwatch put-metric-data --metric-name throttlecount --namespace observability --unit Count --value 156 --dimensions ServerName=DemoServer, ServerType=A1
+
+            <img src="images/image12.png" class="inline"/> 
+           
+       2. Traverse to the <a href="https://console.aws.amazon.com/cloudwatch/">CloudWatch</a> select Metrics
+       
+       3. Select observability namespace and then select ServerName, ServerType
+      
+            <img src="images/image13.png" class="inline"/>
+            
+            <img src="images/image14.png" class="inline"/> 
+     
+       4. Here we should see the custom metric that we just published.
+
+            <img src="images/image15.png" class="inline"/> 
