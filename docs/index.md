@@ -38,11 +38,11 @@
      
       <img src="images/image5.png" class="inline"/> 
    
-   5. Select on the Graphed metrics tab, we can change the metric statistic by selecting on the statistic type as shown below
+   5. Select on the Graphed metrics tab, we can change the metric statistic by selecting the statistic type as shown below
      
       <img src="images/image6.png" class="inline"/> 
    
-   6. Container Insights captures metrics at 5 minute interval by default. In order to see granular data graphed, change the Period to 1 Minute
+   6. Container Insights captures metrics at the 5-minute intervals by default. In order to see granular data graphed, change the Period to 1 Minute
    
       <img src="images/image7.png" class="inline"/> 
 
@@ -85,7 +85,7 @@
       
 - Step 3: Publish custom metrics
     
-  - We can embed own custom metrics in a multiple different ways
+  - We can embed our own custom metrics in multiple different ways
 
       - <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">AWS CLI</a>
 
@@ -93,9 +93,9 @@
 
       - <a href="https://observability.workshop.aws/en/emf.html">Embedded Metric Format</a>
    
-  - In this example we will uses the AWS CLI to embed a metric called throttlecount under the dimension ServerName,ServerType to the observability namespace
+  - In this example, we will use the AWS CLI to embed a metric called throttlecount under the dimension ServerName, ServerType to the observability namespace
 
-       1. Run the below command in the on CloudShell or on your own terminal
+       1. Run the below command on CloudShell or on your own terminal
 
               aws cloudwatch put-metric-data --metric-name throttlecount --namespace observability --unit Count --value 156 --dimensions ServerName=DemoServer, ServerType=A1
 
