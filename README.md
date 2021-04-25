@@ -1,1 +1,1 @@
-# aws-cloudwatch-metrics2
+# cloudwatch-metrics
